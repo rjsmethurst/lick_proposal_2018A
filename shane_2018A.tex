@@ -27,6 +27,23 @@
 
 \def\lesssim{\mathrel{\hbox{\rlap{\hbox{\lower3pt\hbox{$\sim$}}}\hbox{\raise2pt\hbox{$<$}}}}}
 
+\usepackage{colortbl}
+\usepackage[table]{xcolor}
+\definecolor{lightgray}{gray}{0.95}
+
+\usepackage{longtable}
+\usepackage{array} % for ExtraRowHeight
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}}
+\newcolumntype{C}{>{\centering\arraybackslash}}
+
+\renewcommand{\arraystretch}{1.5}
+\renewcommand{\tabcolsep}{0.2cm}
+
+\setlength{\LTpre}{6pt}
+\setlength{\LTpost}{6pt}
+
 \begin{document}
 
 \noindent \emph{Shane Proposal ID ???? (2018A), Kast Double-Beam Spectrograph, ? nights} \\
@@ -92,14 +109,21 @@ $[6]$ Carniani et al. 2015, A\&A, 580, 102
 \caption{Black hole mass versus total stellar mass$^{[4]}$ derived from SDSS spectra (black crosses) and from INT spectra (blue squares; semester 2014A) for our entire disk-dominated sample. The six galaxies in this proposal are highlighted by the green circles. The best-fit line to the disk-dominated sample is shown in black (solid line), with the relation for early-types from Häring \& Rix$^{[5]}$ shown in red (dashed line). The relations are consistent for populations of disk-dominated and early-type galaxies, suggesting secular processes must fuel black hole growth regardless of morphology.}
 \end{figure}
 
+\vspace{0.25em}
 
 \noindent {\bf Supplementary Observations Required from Other Observatories}
-\\
-No additional observations are required from other observatories.
+
+\vspace{0.25em}
+
+\noindent No additional observations are required from other observatories.
+
+\vspace{0.25em}
 
 \noindent {\bf Technical Remarks}
-\\
+
+\vspace{0.25em}
 This proposal is informed by conversation with UCO/Lick support astronomers and telescope operators. The availability of a variety of narrow-band filters makes Lick an optimal facility for imaging the outflows of relatively nearby AGN. We had originally considered applying for time on the Nickel, but conversations with Mt. Hamilton staff encouraged us to consider using Kast as an imager with the narrow-band filters currently housed at the 3-m. However, we are very open to further discussions if some other setup would make best use of the facilities.
+\vspace{0.25em}
 
 This is a study of six disk-dominated AGN host galaxies using narrow-band imaging to observe outflows in \textsc{[OIII]} $5007\rm{\AA}$ with the ACAM on the WHT. Narrow-band imaging will allow the luminosity and spatial extent of the outflow to be determined, so that the gas mass in the outflow and therefore the outflow rate can be determined. The six galaxies are spread across the sky such that the best time for observations is during dark skies in January.
 \vspace{0.25em}
@@ -114,22 +138,60 @@ Given the energy per \textsc{[oiii]} $5007\rm{\AA}$ photon, the throughput of ea
 \vspace{0.25em}
 
 Using this information combined with the overhead estimates from the ACAM Total Observing Time Estimator and considering the average weather downtime of $34\%$ in January, we calculate that we can observe all 6 targets in 2.27 nights of dark skies in January of the 2017B semester, therefore we have requested 3 dark sky nights of observing time. Observations will also be possible split across 2 dark sky nights, with 1 night in August-September and 2 in January.
+\vspace{0.25em}
 
-{\bf Path to Science}
-\\
+\noindent {\bf Path to Science}
+
+\vspace{0.25em}
 Given the uniqueness of these sources as AGN hosted in disk-dominated galaxies yet with clear signs of outflows, these targets are publishable in comparison with more ``typical'' examples of AGN outflows. Following reduction of the data, we will use standard techniques to measure luminosity and subtract the continuum in order to use the method described above to estimate the mass outflowing and place limits on inflowing mass. The next steps after the publication of the first paper depend somewhat on the results; it may be that the diversity of morphologies and luminosities lead us to propose for additional observations of the sample, but even should this not be the case there is a clear path to at least 1 publication with this data set.
+\vspace{0.25em}
 
-{\bf Status of Previously Approved 3-m Programs}
-\\
+\noindent {\bf Status of Previously Approved 3-m Programs}
+
+\vspace{0.25em}
 This is a sub-sample from a larger sample observed over the past several semesters at Lick. These AGN hosted in disk-dominated galaxies are a rich sample of interesting sources; the primary driver for the science was the measurement of black hole masses for comparison to bulge- and galaxy stellar masses, as part of an ongoing program including multi-wavelength SDSS and \emph{HST} imaging. The secondary purpose for observing these with the Shane/KAST setup is to investigate the star formation properties of these disk galaxies. Both programs are ongoing; the \emph{HST} program has just completed, the Lick data is being reduced as it comes in (we still have further nights scheduled in 2017B) and a paper is in progress. The outflows in the sample were a serendipitous discovery while measuring black hole masses, and led to this proposal. 
+\vspace{0.25em}
 
-{\bf Backup Observing Program}
-\\
+\noindent {\bf Backup Observing Program}
+
+\vspace{0.25em}
 We can observe the same targets even in poor seeing, as the narrow wavelength bands mean we are less likely to be contaminated by the main AGN [OIII] luminosity even if the PSF extends over more pixels than is ideal. If there are wind restrictions or similar, we can focus on the subset of targets that are within the restricted cone. If there is an issue with the filter wheel or the non-standard setup we have proposed, we can observe our targets in the more standard spectrographic setup, with a slit pattern designed to approximate 2-D coverage of the targets. While this is not ideal from a data reduction standpoint, its availability as a backup program means we are robust to many potential failure modes. 
+\vspace{1.5em}
 
-{\bf Target Source List}
-\\
+\noindent {\bf Target Source List}
+\vspace{0.5em}
+{\small 
+ 
+\rowcolors{1}{lightgray}{}
+\begin{longtable}{Cp{3.5cm}Cp{2cm}Cp{2cm}Cp{2cm}Cp{2cm}Cp{2cm}Cp{2cm}}
+\hline
+SDSS ID & RA & Dec & Outflow surface brightness $[\rm{mag}$ $\rm{arcsec}^{-2}]$ & Total exposure time [s] & Outflow narrow band filter $\lambda~[\AA]$ & Continuum narrow band filter $\lambda~[\AA]$ \\
+\hline
+1237649953863368738 & 11.831 & +14.704 & 31.78 & 2902 & 5199 & 5298 \\
+1237666661313544194 & 19.871 & -0.144 & 28.77 & 408 & 5434 & 5610 \\
+1237663655882064127 & 112.861 & +45.372 & 26.53 & 210 & 5503 & 5646 \\
+1237663531870191740 & 123.350 & +54.377 & 29.12 & 1009 & 5232 & 5332 \\
+1237658424619696216 & 141.839 & +6.166 & 26.49 & 47 & 5382 & 5503 \\
+1237660669817061494 & 153.161 & +10.289 & 27.88 & 141 & 5382 & 5780 \\
+1237662195054673929 & 158.661 & +39.641 & 28.33 & 400 & 5232 & 5332 \\
+1237667911661649935 & 171.515 & +24.554 & 28.96 & 234 & 5332 & 6067 \\
+1237667486470176778 & 171.904 & +24.823 & 31.91 & 2935 & 5298 & 6067 \\
+1237661966353104933 & 175.014 & +41.251 & 30.84 & 1225 & 5382 & 5780 \\
+1237667782293979150 & 175.317 & +21.939 & 27.36 & 61 & 5332 & 5780 \\
+1237661967971385403 & 198.715 & +42.305 & 28.45 & 121 & 5382 & 5780 \\
+1237665548886081560 & 205.986 & +25.647 & 29.53 & 310 & 5434 & 5780 \\
+1237661852549709862 & 206.110 & +44.272 & 33.19 & 7880 & 5265 & 5780 \\
+1237654880205209621 & 226.486 & +3.707 & 30.10 & 898 & 5199 & 5298 \\
+1237659149386973357 & 226.969 & +51.853 & 32.67 & 5285 & 5382 & 5780 \\
+1237662662680051805 & 239.578 & +25.857 & 27.05 & 45 & 5382 & 5780 \\
+1237662504293892158 & 239.790 & +35.030 & 31.85 & 12268 & 5199 & 5298 \\
+1237659324953460779 & 242.028 & +42.683 & 33.49 & 10838 & 5434 & 5780 \\
+1237662500012949661 & 252.763 & +26.296 & 30.86 & 1518 & 5434 & 5646 \\
+\hline
+\end{longtable}
 
-{\bf Abstract}
+}
+\noindent {\bf Abstract}
+\vspace{0.25em}
 
 \end{document}
